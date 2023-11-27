@@ -1,0 +1,19 @@
+@import "../../styles/devices.scss";
+
+.layout {
+  padding: var(--spacing-xlarge);
+  display: flex;
+  max-width: calc(
+    100% - (var(--sticky-menu-width) + (var(--spacing-default) * 3))
+  );
+
+  .container {
+    max-width: 640px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @include screen(mobile) {
+    max-width: 100%;
+  }
+}

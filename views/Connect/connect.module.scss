@@ -1,0 +1,43 @@
+.content {
+  display: flex;
+  width: 100%;
+  text-align: center;
+
+  .heading,
+  div[class*="_headline__"] {
+    display: grid;
+    gap: var(--spacing-xsmall);
+    margin-top: var(--spacing-default);
+    margin-bottom: var(--spacing-xxxlarge);
+
+    p {
+      color: var(--background-on-secondary);
+    }
+  }
+
+  .errorMessage {
+    margin-bottom: var(--spacing-xxlarge);
+  }
+
+  [class*="message"] {
+    text-align: left;
+  }
+
+  .buttonList {
+    width: 100%;
+    display: grid;
+    gap: var(--spacing-default);
+    margin-bottom: var(--spacing-xxlarge);
+  }
+
+  .divider {
+    margin-bottom: var(--spacing-xxlarge);
+  }
+
+  form {
+    input,
+    [class*="appSelectbox"] {
+      text-align: left;
+    }
+  }
+}

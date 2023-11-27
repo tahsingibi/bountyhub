@@ -1,0 +1,67 @@
+.form {
+  width: 100%;
+  display: grid;
+  gap: var(--spacing-xxlarge);
+  box-sizing: border-box;
+}
+
+.buttonGroup {
+  display: grid;
+  width: 100%;
+  gap: var(--spacing-default);
+}
+
+.fields {
+  display: grid;
+  gap: var(--spacing-default);
+}
+
+.formfield {
+  width: 100%;
+  display: grid;
+
+  label {
+    margin-bottom: var(--spacing-xsmall);
+  }
+
+  &Message {
+    height: 0;
+    transform: translateY(50%);
+    opacity: 0;
+    transition: all 0.2s ease;
+
+    &.show {
+      margin: var(--spacing-xsmall) 0;
+      opacity: 1;
+      transform: translateY(0%);
+      height: auto;
+      transition: all 0.2s ease;
+    }
+  }
+}
+
+.item {
+  .toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    box-sizing: border-box;
+
+    .left {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      span {
+        color: var(--background-on-muted);
+      }
+      * {
+        margin: 0;
+      }
+    }
+
+    [class*="toggle_toggleSwitch"] {
+      margin: 0 !important;
+    }
+  }
+}

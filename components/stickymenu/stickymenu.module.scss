@@ -1,0 +1,72 @@
+@import "../../styles/devices.scss";
+
+.sticky {
+  position: sticky;
+  top: 0;
+  max-width: var(--sticky-menu-width);
+  width: 100%;
+
+  button {
+    display: none !important;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xsmall);
+
+    a {
+      text-decoration: none;
+      padding: var(--spacing-xsmall) 0;
+      display: flex;
+      gap: var(--spacing-xsmall);
+      color: var(--surface-on-secondary);
+
+      &.active {
+        color: var(--primary-color);
+      }
+    }
+  }
+
+  @include screen(mobile) {
+    position: fixed;
+    z-index: 1;
+    inset: 0;
+    max-width: 100dvw;
+    padding: var(--spacing-default);
+    transition: all 0.4s ease-in-out;
+    pointer-events: none;
+    box-sizing: border-box;
+
+    &.large {
+      width: 100%;
+      background: var(--background-color);
+      background: #000;
+      pointer-events: auto;
+    }
+
+    button {
+      position: fixed;
+      display: block !important;
+      z-index: 2;
+      top: 73px;
+      pointer-events: auto;
+    }
+
+    nav {
+      height: 100%;
+      margin-top: calc(73px + var(--spacing-default));
+      transform: translateX(calc(var(--sticky-menu-width) * (-2)));
+      transition: all 0.4s ease-in-out;
+      user-select: none;
+      pointer-events: none;
+
+      &.show {
+        transform: translateX(0);
+        transition: all 0.4s ease-in-out;
+        user-select: auto;
+        pointer-events: auto;
+      }
+    }
+  }
+}

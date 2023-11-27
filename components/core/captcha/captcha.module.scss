@@ -1,0 +1,9 @@
+.captcha {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-default);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--surface-on-muted);
+}

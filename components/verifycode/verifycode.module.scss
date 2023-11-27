@@ -1,0 +1,83 @@
+.verifycode {
+  display: grid !important;
+  .headline {
+    display: grid;
+    place-items: center;
+    text-align: center;
+    gap: var(--spacing-xsmall);
+    margin-bottom: var(--spacing-xxxlarge);
+
+    p {
+      color: var(--background-on-secondary);
+    }
+  }
+  .group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-xsmall);
+    margin-bottom: var(--spacing-default);
+    box-sizing: border-box;
+
+    input {
+      max-width: 34px;
+      -moz-appearance: textfield;
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+  }
+  div[class*="message_danger__"] {
+    margin-bottom: var(--spacing-xxlarge);
+  }
+
+  button[class*="button_link__"] > * {
+    color: var(--surface-on-muted);
+  }
+}
+
+.stateMessage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--spacing-default);
+
+  * {
+    text-align: center;
+  }
+
+  .show {
+    div {
+      display: flex;
+    }
+  }
+}
+
+.resendable {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--surface-secondary-on-secondary);
+
+  a {
+    font-weight: var(--font-weight-bold);
+  }
+}
+.countmessage {
+  width: 100%;
+  display: none;
+}
+.sended {
+  div {
+    span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}

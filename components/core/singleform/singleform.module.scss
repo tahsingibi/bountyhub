@@ -1,0 +1,48 @@
+@import "../../../styles/devices.scss";
+
+.form {
+  width: 100%;
+  display: grid;
+
+  &Text {
+    display: grid;
+    gap: var(--spacing-xxsmall);
+    margin-bottom: var(--spacing-default);
+
+    span {
+      color: var(--surface-secondary-on-muted);
+    }
+  }
+
+  .field {
+    display: grid;
+    grid-template-columns: 9fr 3fr;
+    gap: var(--spacing-default);
+    margin-bottom: 0;
+
+    &Message {
+      text-align: left;
+      color: var(--danger-on);
+      height: 0;
+      transform: translateY(50%);
+      opacity: 0;
+      transition: all 0.2s ease;
+
+      &.show {
+        margin: var(--spacing-default) 0;
+        opacity: 1;
+        transition: all 0.2s ease;
+      }
+    }
+  }
+
+  @include screen(mobile) {
+    .field {
+      grid-template-columns: 12fr;
+      grid-template-rows: 1fr;
+    }
+    .fieldMessage.show {
+      margin-bottom: var(--spacing-xxlarge);
+    }
+  }
+}

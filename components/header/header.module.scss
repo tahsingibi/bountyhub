@@ -1,0 +1,48 @@
+@import "../../styles/devices.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spacing-default);
+  border-bottom: 1px solid var(--surface-secondary-color);
+
+  .left {
+    display: flex;
+    gap: var(--spacing-xxxlarge);
+    align-items: center;
+  }
+
+  .right {
+    display: flex;
+    gap: var(--spacing-small);
+    align-items: center;
+
+    input,
+    [class*="button_secondary__"] > * {
+      color: var(--surface-on-secondary);
+    }
+    [class*="heart"] {
+      color: var(--danger-color);
+    }
+  }
+
+  nav.static {
+    display: flex;
+    gap: var(--spacing-xxlarge);
+
+    a {
+      color: var(--surface-on-muted);
+      text-decoration: none;
+    }
+  }
+
+  @include screen(mobile) {
+    nav.static,
+    button,
+    input,
+    [class*="input_input__"] {
+      display: none !important;
+    }
+  }
+}

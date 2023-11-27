@@ -1,0 +1,20 @@
+.heading {
+  color: var(--background-on);
+  font-weight: var(--font-weight-bold);
+
+  &,
+  &.default {
+    font-size: var(--heading-default-font-size);
+    line-height: var(--heading-default-font-size-line-height);
+  }
+
+  &.large {
+    font-size: var(--heading-large-font-size);
+    line-height: var(--heading-large-font-size-line-height);
+  }
+
+  &.small {
+    font-size: var(--heading-small-font-size);
+    line-height: var(--heading-small-font-size-line-height);
+  }
+}

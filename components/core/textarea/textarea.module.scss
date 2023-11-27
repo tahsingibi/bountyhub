@@ -1,0 +1,28 @@
+$input-default: var(--surface-color);
+$input-default-text: var(--surface-on);
+$input-default-border: var(--surface-secondary-color);
+$input-lg-font-size: var(--spacing-xxlarge);
+$input-placeholder-opacity: 0.25;
+
+.textarea {
+  width: 100%;
+  background: $input-default;
+  border-radius: var(--radius-default);
+  padding: var(--spacing-small) var(--spacing-default);
+  box-shadow: inset 0px 0px 0px 1px $input-default-border;
+  border: 0;
+  box-sizing: border-box;
+  color: $input-default-text;
+  font-size: var(--text-default-font-size);
+  resize: none;
+  &::placeholder {
+    color: $input-default-text;
+    opacity: $input-placeholder-opacity;
+  }
+  &:focus,
+  &:focus-visible {
+    border: 0;
+    box-shadow: inset 0px 0px 0px 1px var(--primary-color);
+    outline: none;
+  }
+}

@@ -1,0 +1,19 @@
+.text {
+  &,
+  &.default {
+    font-size: var(--text-default-font-size);
+    line-height: var(--text-default-font-size-line-height);
+  }
+
+  &.small {
+    font-size: var(--text-small-font-size);
+    line-height: var(--text-small-font-size-line-height);
+  }
+  &.regular {
+    font-weight: var(--font-weight-normal);
+  }
+  b,
+  &.bold {
+    font-weight: var(--font-weight-bold);
+  }
+}

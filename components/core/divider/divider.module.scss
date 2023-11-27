@@ -1,0 +1,29 @@
+.divider {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+
+  &,
+  &::before,
+  &::after {
+    color: var(--surface-color);
+  }
+
+  span {
+    text-transform: uppercase;
+    margin: 0 var(--spacing-default);
+  }
+
+  &::before,
+  &::after {
+    display: flex;
+    flex: 1;
+    flex-grow: 1;
+    content: "";
+    height: 1px;
+    max-width: 100%;
+    box-sizing: border-box;
+    background-color: currentColor;
+  }
+}

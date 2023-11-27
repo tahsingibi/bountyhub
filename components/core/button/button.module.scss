@@ -1,0 +1,100 @@
+$primary-disabled-opacity: 0.25;
+$secondary-disabled-opacity: 0.5;
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xsmall);
+  width: 100%;
+  border-radius: var(--radius-default);
+  padding: var(--spacing-small) var(--spacing-xlarge);
+  border: none;
+  max-height: var(--spacing-xxxlarge);
+
+  .loading {
+    transform: scale(0);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: initial;
+    color: currentColor;
+    background-color: inherit;
+  }
+
+  &.primary {
+    background: var(--primary-color);
+    color: var(--primary-on);
+
+    &[data-disabled="true"] {
+      opacity: $primary-disabled-opacity;
+    }
+  }
+
+  &.secondary {
+    background: var(--surface-color);
+    color: var(--surface-on);
+    &[data-disabled="true"] {
+      opacity: $secondary-disabled-opacity;
+    }
+  }
+
+  &.primary,
+  &.secondary {
+    position: relative;
+    width: 100%;
+
+    &[data-loading="true"] {
+      position: relative;
+      overflow: hidden;
+      i {
+        opacity: 0;
+        visibility: hidden;
+      }
+
+      .loading {
+        transform: scale(1);
+        i[class*="processing"] {
+          opacity: 1;
+          visibility: visible;
+          font-size: var(--heading-default-font-size);
+        }
+      }
+
+      &:disabled {
+        opacity: 1;
+      }
+    }
+
+    &.iconOnly {
+      padding: var(--spacing-small);
+      display: flex;
+      width: min-content;
+      height: min-content;
+      aspect-ratio: 1/1;
+
+      i {
+        display: flex;
+        width: fit-content;
+        height: fit-content;
+        aspect-ratio: 1/1;
+        padding: 1.335px;
+      }
+    }
+  }
+
+  &.link {
+    padding-top: 0;
+    padding-bottom: 0;
+    background: transparent;
+    color: var(--surface-on);
+  }
+
+  &.size_small {
+    width: fit-content;
+    padding: var(--spacing-xsmall) var(--spacing-large);
+  }
+}

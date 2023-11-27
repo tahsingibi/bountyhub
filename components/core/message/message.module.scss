@@ -1,0 +1,62 @@
+.wrap {
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+  height: 0;
+
+  .message {
+    padding: var(--spacing-xsmall) var(--spacing-default);
+    border-radius: var(--radius-small);
+    background: var(--danger-color);
+    color: var(--danger-color-on);
+    box-sizing: border-box;
+    max-width: 100%;
+    opacity: 0;
+    transition: all 0.2s ease;
+
+    &.info {
+      background-color: var(--info-color);
+      color: var(--info-color-on);
+    }
+    &.danger {
+      background-color: var(--danger-color);
+      color: var(--danger-color-on);
+    }
+    &.success {
+      background-color: var(--success-color);
+      color: var(--success-color-on);
+    }
+    &.warning {
+      background-color: var(--warning-color);
+      color: var(--warning-color-on);
+    }
+
+    &.text {
+      padding: 0;
+      background: none;
+      &.info {
+        color: var(--info-color);
+      }
+      &.danger {
+        color: var(--danger-color);
+      }
+      &.success {
+        color: var(--success-color);
+      }
+      &.warning {
+        color: var(--warning-color);
+      }
+    }
+  }
+
+  &.show {
+    transition: all 0.2s ease-in-out;
+    transform: translateY(0%);
+    opacity: 1;
+    height: auto;
+    .message {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+}

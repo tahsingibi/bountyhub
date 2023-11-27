@@ -1,0 +1,124 @@
+$selectbox-placeholder-opacity: 0.25;
+
+.wrap {
+  width: 100% !important;
+  min-width: 260px;
+  text-align: left;
+}
+
+.selectbox {
+  width: 100% !important;
+  min-width: 260px;
+
+  &,
+  * {
+    outline: none;
+    border: none !important;
+    box-shadow: none !important;
+    cursor: pointer !important;
+    font-size: var(--text-default-font-size);
+  }
+
+  &:has(div[id*="-listbox"]) {
+    [class*="appSelectbox__dropdown-indicator"] {
+      svg {
+        transform: rotate(180deg);
+        transition: transform 0.1s linear !important;
+      }
+    }
+  }
+  div[class*="control"] {
+    background: var(--surface-color);
+    border: 1px solid var(--surface-secondary-color) !important;
+    border-radius: var(--radius-default);
+    max-height: var(--spacing-xxxlarge) !important;
+    box-sizing: border-box;
+    &:focus-within {
+      border: 1px solid var(--primary-color) !important;
+    }
+  }
+  div[class*="appSelectbox__value-container"] {
+    padding: var(--spacing-small) var(--spacing-default);
+    box-sizing: border-box;
+  }
+
+  div[class*="appSelectbox__multi-value"] {
+    background: var(--surface-secondary-color);
+    color: var(--surface-secondary-on);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--radius-small);
+
+    div[class*="appSelectbox__multi-value__label"] {
+      padding-left: var(--spacing-xsmall);
+      padding-right: var(--spacing-xsmall);
+    }
+    div[class*="appSelectbox__multi-value__remove"] {
+      color: var(--danger-color);
+      padding: 0 var(--spacing-xxsmall) 0 0;
+      margin: 0;
+    }
+  }
+
+  div[id="-placeholder"] {
+    color: var(--surface-on);
+    opacity: $selectbox-placeholder-opacity;
+  }
+  div[class*="appSelectbox__input-container"] {
+    padding: 0 !important;
+  }
+  [class*="-indicatorSeparator"] {
+    background: none;
+  }
+  [class*="-indicatorContainer"] {
+    color: var(--surface-secondary-on-muted);
+    svg {
+      transition: transform 0.1s linear !important;
+    }
+  }
+  [class*="-singleValue"] {
+    color: var(--surface-on-primary);
+  }
+  div[class*="appSelectbox__menu"] {
+    padding: var(--spacing-xxsmall) !important;
+  }
+  div[class*="appSelectbox__menu"],
+  [id*="-listbox"] {
+    border-radius: var(--radius-default);
+    background: var(--surface-color);
+  }
+  [class*="-option"] {
+    padding: var(--spacing-small) !important;
+    border-radius: var(--radius-default);
+    line-height: var(--text-default-font-size-line-height);
+
+    &:hover {
+      background-color: var(--surface-secondary-color);
+    }
+  }
+  [class*="-option"] + [class*="-option"] {
+    margin-top: var(--spacing-xxsmall);
+  }
+
+  div[class*="-MenuList"] {
+    border-radius: var(--radius-default);
+    padding: var(--spacing-xsmall);
+    background: var(--surface-color);
+
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+      background: var(--surface-secondary-color);
+      border-radius: 4px;
+    }
+  }
+
+  i[class*="app-icon"] {
+    margin-left: var(--spacing-default);
+    margin-right: calc(var(--spacing-xsmall) * -1);
+    color: var(--surface-on) !important;
+    opacity: $selectbox-placeholder-opacity;
+  }
+}

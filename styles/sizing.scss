@@ -1,0 +1,49 @@
+// SIZING
+$sizing-xxsmall: 4px;
+$sizing-xsmall: 8px;
+$sizing-small: 12px;
+$sizing-default: 16px;
+$sizing-large: 20px;
+$sizing-xlarge: 24px;
+$sizing-xxlarge: 32px;
+$sizing-xxxlarge: 48px;
+
+:root {
+  --app-height: calc(var(--vh, 1vh) * 100);
+  --sticky-menu-width: 192px;
+
+  --spacing-xxsmall: #{$sizing-xxsmall};
+  --spacing-xsmall: #{$sizing-xsmall};
+  --spacing-small: #{$sizing-small};
+  --spacing-default: #{$sizing-default};
+  --spacing-large: #{$sizing-large};
+  --spacing-xlarge: #{$sizing-xlarge};
+  --spacing-xxlarge: #{$sizing-xxlarge};
+  --spacing-xxxlarge: #{$sizing-xxxlarge};
+
+  --radius-small: #{$sizing-xsmall};
+  --radius-default: #{$sizing-small};
+  --radius-large: #{$sizing-default};
+  --radius-xlarge: #{$sizing-xxlarge};
+  --radius-full: 999px;
+
+  --font-weight-bold: 600;
+  --font-weight-normal: 400;
+
+  --heading-large-font-size: #{$sizing-xlarge};
+  --heading-large-font-size-line-height: #{$sizing-xxlarge};
+
+  --heading-default-font-size: #{$sizing-large};
+  --heading-default-font-size-line-height: #{$sizing-xxlarge};
+
+  --heading-small-font-size: #{$sizing-default};
+  --heading-small-font-size-line-height: #{$sizing-xlarge};
+
+  --text-default-font-size: #{$sizing-default};
+  --text-default-font-size-line-height: #{$sizing-xlarge};
+
+  --text-small-font-size: #{$sizing-small};
+  --text-small-font-size-line-height: #{$sizing-large};
+
+  --blur-default: #{$sizing-xsmall};
+}

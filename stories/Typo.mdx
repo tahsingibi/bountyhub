@@ -1,0 +1,31 @@
+import { Meta, Typeset } from "@storybook/blocks";
+
+<Meta title="Design System/Typography" />
+
+export const SampleText =
+  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";
+
+# Typography
+
+**Font:** Outfit
+
+**Weights:** 400(regular), 600(bold)
+
+<div style={{ color: "black" }}>
+  <br />
+  <br />
+  # Heading Component
+  <br />
+  ### Default - Font Weight: 400
+  <Typeset fontSizes={[24, 20, 16]} sampleText={SampleText} />
+  ### Bold - Font Weight: 600
+  <Typeset fontSizes={[24, 20, 16]} sampleText={SampleText} fontWeight={600} />
+  <br />
+  <br />
+  # Text Component
+  <br />
+  ### Default - Font Weight: 400
+  <Typeset fontSizes={[16, 12]} sampleText={SampleText} />
+  ### Bold - Font Weight: 600
+  <Typeset fontSizes={[16, 12]} sampleText={SampleText} fontWeight={600} />
+</div>

@@ -1,0 +1,53 @@
+import { Meta, ColorPalette, ColorItem, Title } from "@storybook/blocks";
+
+export const AppColors = [
+  {
+    name: "Dark",
+    colors: {
+      $dark_900: "#050505",
+      $dark_800: "#161616",
+      $dark_700: "#262626",
+    },
+  },
+  {
+    name: "Light",
+    colors: {
+      $light_100: "#F0F0F0",
+      $light_200: "#B5BAC1",
+      $light_300: "#66696E",
+    },
+  },
+  {
+    name: "Primary",
+    colors: { $primary: "#FC0" },
+  },
+  {
+    name: "Success",
+    colors: { $success: "#009541" },
+  },
+  {
+    name: "Danger",
+    colors: { $danger: "#dc1833" },
+  },
+  {
+    name: "Warning",
+    colors: { $warning: "#ff9500" },
+  },
+  {
+    name: "Info",
+    colors: { $info: "#5856d6" },
+  },
+];
+
+<Meta title="Design System/Theme/Default/Colors" />
+<Title>Default Theme Colors</Title>
+The colors are provided as SASS variables along with their hex codes. These
+listed colors should only be used directly within the theme.scss files and
+should not be used outside of it.
+
+<hr />
+<ColorPalette>
+  {AppColors.map((color, i) => (
+    <ColorItem key={i} title={`${color.name}`} colors={color.colors} />
+  ))}
+</ColorPalette>

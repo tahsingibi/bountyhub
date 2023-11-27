@@ -1,0 +1,71 @@
+@import "../reset.scss";
+@import "../sizing.scss";
+@import "../icons/AppIcon/style.scss";
+@import "../fonts/outfit/style.scss";
+@import "../devices.scss";
+@import "../storybook.scss";
+
+$dark_900: #050505;
+$dark_800: #161616;
+$dark_700: #262626;
+$light_100: #f0f0f0;
+$light_200: #b5bac1;
+$light_300: #66696e;
+$primary: #fc0;
+$selection: #a58e5c;
+$success: #009541;
+$danger: #dc1833;
+$warning: #ff9500;
+$info: #5856d6;
+
+:root {
+  --background-color: #{$dark_900};
+  --background-on-primary: #{$light_100};
+  --background-on-secondary: #{$light_200};
+  --background-on-muted: #{$light_300};
+
+  --surface-color: #{$dark_800};
+  --surface-on-primary: #{$light_100};
+  --surface-on-secondary: #{$light_200};
+  --surface-on-muted: #{$light_300};
+
+  --surface-secondary-color: #{$dark_700};
+  --surface-secondary-on-primary: #{$light_100};
+  --surface-secondary-on-secondary: #{$light_200};
+  --surface-secondary-on-muted: #{$light_300};
+
+  --primary-color: #{$primary};
+  --primary-on: #{$dark_800};
+
+  --success-color: #{$success};
+  --success-on: #{$light_100};
+
+  --danger-color: #{$danger};
+  --danger-on: #{$light_100};
+
+  --warning-color: #{$warning};
+  --warning-on: #{$light_100};
+
+  --info-color: #{$info};
+  --info-on: #{$light_100};
+
+  --selection-color: #{$selection};
+}
+body {
+  background: var(--background-color);
+  color: var(--background-on-primary);
+  * {
+    font-family: var(--font-family);
+  }
+  ::selection {
+    background: var(--selection-color);
+    color: var(--primary-on);
+  }
+  a {
+    color: currentColor;
+  }
+  b,
+  strong {
+    font-weight: var(--font-weight-bold);
+  }
+}

@@ -1,0 +1,77 @@
+import { Meta, ColorPalette, ColorItem, Title } from "@storybook/blocks";
+
+export const AppColors = [
+  {
+    name: "Background",
+    colors: {
+      Color: "var(--background-color)",
+      "On Primary": "var(--background-on-primary)",
+      "On Secondary": "var(--background-on-secondary)",
+      "On Muted": "var(--background-on-muted)",
+    },
+  },
+  {
+    name: "Surface",
+    colors: {
+      Color: "var(--surface-color)",
+      "On Primary": "var(--surface-on-primary)",
+      "On Secondary": "var(--surface-on-secondary)",
+      "On Muted": "var(--surface-on-muted)",
+    },
+  },
+  {
+    name: "Surface Secondary",
+    colors: {
+      Color: "var(--surface-secondary-color)",
+      "On Primary": "var(--surface-secondary-on-primary)",
+      "On Secondary": "var(--surface-secondary-on-secondary)",
+      "On Muted": "var(--surface-secondary-on-muted)",
+    },
+  },
+  {
+    name: "Primary",
+    colors: {
+      Color: "var(--primary-color)",
+      On: "var(--primary-on)",
+    },
+  },
+  {
+    name: "Success",
+    colors: {
+      Color: "var(--success-color)",
+      On: "var(--success-on)",
+    },
+  },
+  {
+    name: "Danger",
+    colors: {
+      Color: "var(--danger-color)",
+      On: "var(--danger-on)",
+    },
+  },
+  {
+    name: "Warning",
+    colors: {
+      Color: "var(--warning-color)",
+      On: "var(--warning-on)",
+    },
+  },
+  {
+    name: "Info",
+    colors: {
+      Color: "var(--info-color)",
+      On: "var(--info-on)",
+    },
+  },
+];
+
+<Meta title="Design System/Theme/Default/Theme" />
+<Title>Theme / Default</Title>
+It contains all the theme colors used throughout the application.
+<hr />
+
+<ColorPalette>
+  {AppColors.map((color, i) => (
+    <ColorItem key={i} title={`${color.name}`} colors={color.colors} />
+  ))}
+</ColorPalette>

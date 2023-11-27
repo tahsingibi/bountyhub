@@ -1,0 +1,30 @@
+import { Meta, Canvas } from "@storybook/blocks";
+import Spacing from "./components/spacing/spacing";
+
+<Meta title="Design System/Spacing" />
+
+export const SpacingValues = [
+  { name: "xxSmall", value: "var(--spacing-xxsmall)" },
+  { name: "xSmall", value: "var(--spacing-xsmall)" },
+  { name: "Small", value: "var(--spacing-small)" },
+  { name: "Default", value: "var(--spacing-default)" },
+  { name: "Large", value: "var(--spacing-large)" },
+  { name: "xLarge", value: "var(--spacing-xlarge)" },
+  { name: "xxLarge", value: "var(--spacing-xxlarge)" },
+  { name: "xxxLarge", value: "var(--spacing-xxxlarge)" },
+];
+
+# Spacing
+
+It contains all the spacing values used throughout the application.
+
+<Canvas>
+
+<Spacing>
+{SpacingValues.map(({name, value}, i)=>(
+    <Spacing.Item name={name} value={value} />
+))}
+
+</Spacing>
+
+</Canvas>

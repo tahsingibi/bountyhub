@@ -1,0 +1,13 @@
+@import "./breakpoints.scss";
+
+@mixin screen($size) {
+  @if map-has-key($media, $size) {
+    @media (max-width: map-get($media, $size)) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $size) {
+      @content;
+    }
+  }
+}

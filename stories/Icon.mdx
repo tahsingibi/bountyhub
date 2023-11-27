@@ -1,0 +1,25 @@
+import { Meta, Title, IconGallery, IconItem, Canvas } from "@storybook/blocks";
+import Icon, { AppIcons } from "../components/core/icon/icon";
+
+export const useableIcons = AppIcons.filter((icon) => icon != null);
+
+<Meta title="Design System/Iconography" />
+<Title>Iconography</Title>
+It contains all the icons used throughout the application, and these icons are
+used with the icon component.
+
+Example:`<Icon type="search" />`
+
+<Canvas>
+  <IconGallery>
+    { useableIcons.map((icon, i) => (
+  <IconItem name={icon} key={i}>
+      <font color="black"><Icon type={icon} /></font>
+  </IconItem>
+
+    ))}
+
+</IconGallery>
+
+</Canvas>
+```

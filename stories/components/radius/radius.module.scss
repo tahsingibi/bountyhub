@@ -1,0 +1,28 @@
+.wrapper {
+  display: grid;
+  width: 100%;
+  gap: var(--spacing-xlarge);
+  color: var(--background-color);
+
+  .radius {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    .text {
+      width: 25%;
+    }
+    .block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #ccc;
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .radius + .radius {
+    border-top: 1px solid rgba(black, 0.1);
+    padding-top: var(--spacing-xlarge);
+  }
+}

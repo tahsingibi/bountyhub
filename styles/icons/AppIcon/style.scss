@@ -1,0 +1,113 @@
+@font-face {
+  font-family: "AppIcon";
+  src: url("https://bountyhub-static.azureedge.net/app/font/app-icon/iconApp.woff2")
+    format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+.app-icon {
+  &::before {
+    font-family: "AppIcon", sans-serif;
+  }
+
+  &.down:before {
+    content: "\e001";
+  }
+  &.google:before {
+    content: "\e002";
+  }
+  &.mail:before {
+    content: "\e003";
+  }
+  &.placeholder:before {
+    content: "\e004";
+  }
+
+  &.processing:before {
+    content: "\e005";
+    animation: spin 1.4s linear infinite;
+    transform-origin: center center;
+    display: block;
+    aspect-ratio: 1/1 !important;
+    width: inherit;
+    height: inherit;
+  }
+  &.search:before {
+    content: "\e006";
+  }
+  &.success:before {
+    content: "\e007";
+    color: var(--success-color);
+  }
+  &.up:before {
+    content: "\e008";
+  }
+  &.twitter-x:before {
+    content: "\e009";
+  }
+  &.apple:before {
+    content: "\e010";
+  }
+  &.danger:before {
+    content: "\e011";
+    color: var(--danger-color);
+  }
+  &.discord:before {
+    content: "\e012";
+  }
+  &.link:before {
+    content: "\e013";
+  }
+  &.user:before {
+    content: "\e014";
+  }
+  &.flash:before {
+    content: "\e015";
+  }
+  &.sandwatch:before {
+    content: "\e016";
+  }
+  &.star:before {
+    content: "\e017";
+  }
+  &.wallet:before {
+    content: "\e018";
+  }
+  &.camera:before {
+    content: "\e019";
+  }
+  &.disconnect:before {
+    content: "\e020";
+  }
+  &.fire:before {
+    content: "\e021";
+  }
+  &.heart:before {
+    content: "\e022";
+    transform: translateY(1px);
+  }
+  &.newtab:before {
+    content: "\e023";
+  }
+  &.notification:before {
+    content: "\e024";
+  }
+  &.telegram:before {
+    content: "\e025";
+  }
+  &.menu:before {
+    content: "\e027";
+  }
+  &.close:before {
+    content: "\e028";
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

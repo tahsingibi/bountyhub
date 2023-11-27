@@ -1,0 +1,27 @@
+.wrapper {
+  display: grid;
+  gap: var(--spacing-xlarge);
+  color: var(--background-color);
+  .text {
+    width: 40%;
+  }
+  .spacing {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .block {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      div {
+        height: var(--spacing-xxxlarge);
+        background: #ccc;
+      }
+    }
+  }
+
+  .spacing + .spacing {
+    border-top: 1px solid rgba(black, 0.1);
+    padding-top: var(--spacing-xlarge);
+  }
+}

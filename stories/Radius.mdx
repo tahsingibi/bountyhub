@@ -1,0 +1,25 @@
+import { Meta, Canvas } from "@storybook/blocks";
+import Radius from "./components/radius/radius";
+
+<Meta title="Design System/Radius" />
+
+export const RadiusValues = [
+  { name: "Small", value: "var(--radius-small)" },
+  { name: "Default", value: "var(--radius-default)" },
+  { name: "Large", value: "var(--radius-large)" },
+];
+
+# Radius
+
+It contains all the radius values used throughout the application.
+
+<Canvas>
+
+<Radius>
+{RadiusValues.map(({name, value}, i)=>(
+    <Radius.Item name={name} value={value} />
+))}
+
+</Radius>
+
+</Canvas>

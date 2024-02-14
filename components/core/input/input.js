@@ -1,24 +1,24 @@
-import React, { memo, useRef, useState } from "react";
-import PropTypes from "prop-types";
-import styles from "./input.module.scss";
-import Icon from "../icon/icon";
-import renderClass from "../../../utils/renderClass";
-import NextImage from "next/image";
-import controlTypes from "@/utils/controlTypes";
+import React, { memo, useRef, useState } from 'react';
+import PropTypes from 'prop-types';
+import styles from './input.module.scss';
+import Icon from '../icon/icon';
+import renderClass from '../../../utils/renderClass';
+import NextImage from 'next/image';
+import controlTypes from '../../../utils/controlTypes';
 
 /**
  * All inputs throughout the application should be generated from this component.
  */
 function Input({
-  id = "Bountyhub",
-  placeholder = "Enter your key",
+  id = 'Bountyhub',
+  placeholder = 'Enter your key',
   icon = null,
-  size = "default",
+  size = 'default',
   isRealtimeValidation = false,
   realtimeValidationStatus = false,
   reference = null,
-  align = "",
-  type = "text",
+  align = '',
+  type = 'text',
   isLoading = false,
   disabled = false,
   onChange = () => {},
@@ -33,23 +33,23 @@ function Input({
   const inputRef = reference || initialRef;
 
   const handleClick = () => {
-    if (type == "file") {
+    if (type == 'file') {
       initialRef?.current.click();
     }
   };
 
   const [imageFile, setImageFile] = useState(defaultValue);
 
-  const hasIcon = !!icon?.trim() && size != "large" && align != "center";
-  const hasValidator = isRealtimeValidation && size != "large";
+  const hasIcon = !!icon?.trim() && size != 'large' && align != 'center';
+  const hasValidator = isRealtimeValidation && size != 'large';
 
-  const isValidate = realtimeValidationStatus ? "success" : "danger";
+  const isValidate = realtimeValidationStatus ? 'success' : 'danger';
   const validState =
-    realtimeValidationStatus == null ? "processing" : isValidate;
+    realtimeValidationStatus == null ? 'processing' : isValidate;
 
   const isDisabled = props?.disabled || isLoading;
 
-  const Element = type == "file" ? "button" : "div";
+  const Element = type == 'file' ? 'button' : 'div';
 
   function handleChange(e) {
     const file = (e?.target?.files && e?.target?.files[0]) || null;
@@ -59,7 +59,7 @@ function Input({
       setImageFile(null);
 
       if (!res) {
-        if (file?.type?.includes("image")) {
+        if (file?.type?.includes('image')) {
           const image = new Image();
           image.src = URL.createObjectURL(file);
           setImageFile(image.src);
@@ -84,9 +84,9 @@ function Input({
     <Element
       className={renderClass([
         styles.input,
-        styles["size_" + size],
-        styles["type_" + type],
-        isLoading ? styles.loader : "",
+        styles['size_' + size],
+        styles['type_' + type],
+        isLoading ? styles.loader : '',
       ])}
       onClick={handleClick}
       type="button"
@@ -107,7 +107,7 @@ function Input({
           <Icon type="processing" />
         </div>
       )}
-      {(hasIcon || (icon && type == "file")) && <Icon type={icon} />}
+      {(hasIcon || (icon && type == 'file')) && <Icon type={icon} />}
       <input
         placeholder={placeholder}
         {...props}
@@ -138,12 +138,12 @@ Input.propTypes = {
   /**
    * It is used to determine the input size.
    */
-  size: PropTypes.oneOf(["large", "default", "small"]),
+  size: PropTypes.oneOf(['large', 'default', 'small']),
 
   /**
    *
    */
-  align: PropTypes.oneOf(["center", "left"]),
+  align: PropTypes.oneOf(['center', 'left']),
 
   /**
    * Enables real-time validation of the entered value in the input, and this cannot be used in Large Size inputs.
